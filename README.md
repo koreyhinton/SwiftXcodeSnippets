@@ -33,7 +33,11 @@ table - table controller datasource stubs
 ##### Function/Method-Level Autocompletions
 ```swift
 dispatch_async - dispatch_async
+height - height
 index - index(es) of object(s) passing test
+width - width
+x - x
+y - y
 ```
 
 ##### Code Expression-Level Autocompletions
