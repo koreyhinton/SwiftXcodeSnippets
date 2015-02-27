@@ -37,5 +37,11 @@ collection - table controller datasource stubs
 
 ##### Function/Method-Level Autocompletions
 ```swift
+dispatch_async - dispatch_async
 index - index(es) of object(s) passing test
+```
+
+##### Code Expression-Level Autocompletions
+```swift
+dispatch_async - dispatch_async main queue
 ```
