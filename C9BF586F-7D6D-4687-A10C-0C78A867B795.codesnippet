@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>class AutoCoded: NSObject, NSCoding {
     
-    private let AutoCodingKey = "AutoEncodings"
+    private let AutoCodingKey = "autoEncodings"
     
     required init(coder aDecoder: NSCoder) {
         super.init()
