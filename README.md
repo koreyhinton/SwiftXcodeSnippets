@@ -7,6 +7,7 @@ cp *.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/
 
 ##### Top-Level Autocompletions
 ```swift
+autocoded - autocoded
 operator - operator overload
 singleton - singleton
 singleton - singleton struct
