@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>operator</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func &lt;#==#&gt;(a:&lt;#ObjectClass#&gt;,b:&lt;#ObjectClass#&gt;) -&gt; Bool {
+    return &lt;#condition#&gt;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C695B9D7-830C-4099-9BF0-D3613E93C43E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>overload equal operator function</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>operator overload</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
