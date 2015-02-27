@@ -5,6 +5,10 @@ Swift Code Snippets added to my Xcode Code Snippet Library
 cp *.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/
 ```
 
+##### All-Level Autocompletions
+```swift
+closure - closure
+```
 ##### Top-Level Autocompletions
 ```swift
 autocoded - autocoded
