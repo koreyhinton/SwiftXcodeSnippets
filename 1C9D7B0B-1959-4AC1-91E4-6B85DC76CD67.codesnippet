@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>index</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        let index&lt;#es#&gt; = (&lt;#SwiftArray#&gt; as NSArray).index&lt;#es#&gt;OfObject&lt;#s#&gt;PassingTest { (obj:AnyObject!, index: Int, stop: UnsafeMutablePointer&lt;ObjCBool&gt;) -&gt; Bool in
+            let current = obj as! &lt;#ObjectType#&gt;
+            return &lt;#condition#&gt;
+        }
+        
+        if index&lt;#es#&gt; != NSNotFound {
+            
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1C9D7B0B-1959-4AC1-91E4-6B85DC76CD67</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>objective-c bridged array closure to find index(es) based on a test</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>index(es) of object(s) passing test</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
