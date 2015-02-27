@@ -18,6 +18,7 @@ singleton - singleton struct
 collection - collection datasource stubs
 collection - collection controller datasource stubs
 core data - core data stack
+dateformatter - dateformatter
 prepareForSegue - prepareForSegue stub
 table - table datasource stubs
 table - table controller datasource stubs
