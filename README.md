@@ -18,8 +18,9 @@ singleton - singleton struct
 collection - collection datasource stubs
 collection - collection controller datasource stubs
 core data - core data stack
+prepareForSegue - prepareForSegue stub
 table - table datasource stubs
-collection - table controller datasource stubs
+table - table controller datasource stubs
 ```
 
 ##### Function/Method-Level Autocompletions
