@@ -34,3 +34,8 @@ table - table datasource stubs
 ```swift
 collection - table controller datasource stubs
 ```
+
+##### Function/Method-Level Autocompletions
+```swift
+index - index(es) of object(s) passing test
+```
