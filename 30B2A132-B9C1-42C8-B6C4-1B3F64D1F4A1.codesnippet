@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>core data</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    lazy var applicationDocumentsDirectory: NSURL = {
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        return urls[urls.count-1] as! NSURL
+    }()
+
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        let modelURL = NSBundle.mainBundle().URLForResource("&lt;#ProjectName#&gt;", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOfURL: modelURL)!
+    }()
+
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
+        var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("&lt;#ProjectName#&gt;.sqlite")
+        var error: NSError? = nil
+        var failureReason = "There was an error creating or loading the application's saved data."
+        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &amp;error) == nil {
+            coordinator = nil
+            var dict = [String: AnyObject]()
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason
+            dict[NSUnderlyingErrorKey] = error
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            NSLog("Unresolved error \(error), \(error!.userInfo)")
+            abort()
+        }
+        
+        return coordinator
+    }()
+
+    lazy var managedObjectContext: NSManagedObjectContext? = {
+        let coordinator = self.persistentStoreCoordinator
+        if coordinator == nil {
+            return nil
+        }
+        var managedObjectContext = NSManagedObjectContext()
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        return managedObjectContext
+    }()
+
+    // MARK: - Core Data Saving support
+
+    func saveContext () {
+        if let moc = self.managedObjectContext {
+            var error: NSError? = nil
+            if moc.hasChanges &amp;&amp; !moc.save(&amp;error) {
+                NSLog("Unresolved error \(error), \(error!.userInfo)")
+                abort()
+            }
+        }
+    }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>30B2A132-B9C1-42C8-B6C4-1B3F64D1F4A1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>core data stack</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
