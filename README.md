@@ -21,6 +21,7 @@ singleton - singleton struct
 ```swift
 collection - collection datasource stubs
 collection - collection controller datasource stubs
+compute - compute
 core data - core data stack
 dateformatter - dateformatter
 lazy - lazy
