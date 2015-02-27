@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
         let CellID = &lt;#"CellID"#&gt;
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellID)
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellID) as! UITableViewCell
         
         return cell
     }
