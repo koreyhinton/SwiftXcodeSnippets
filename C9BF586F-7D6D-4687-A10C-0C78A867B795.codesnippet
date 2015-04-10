@@ -13,29 +13,43 @@
     
     private let AutoCodingKey = "autoEncodings"
     
+    override init() {
+        super.init()
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init()
         
-        let decodings = aDecoder.decodeObjectForKey(AutoCodingKey) as! [String]
+        let decodings = aDecoder.decodeObjectForKey(AutoCodingKey) as! NSArray
         setValue(decodings, forKey: AutoCodingKey)
         
         for decoding in decodings {
-            setValue(aDecoder.decodeObjectForKey(decoding), forKey: decoding)
+            setValue(aDecoder.decodeObjectForKey(decoding as! String), forKey: decoding as! String)
         }
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(valueForKey(AutoCodingKey), forKey: AutoCodingKey)
-        for encoding in valueForKey(AutoCodingKey) as! [String] {
-            aCoder.encodeObject(valueForKey(encoding), forKey: encoding)
+        for encoding in valueForKey(AutoCodingKey) as! NSArray {
+            aCoder.encodeObject(valueForKey(encoding as! String), forKey: encoding as! String)
         }
     }
 }
 
 class &lt;#ClassName#&gt;: AutoCoded {
-    let autoEncodings = ["&lt;#myvar1#&gt;","&lt;#myvar2#&gt;"]
-    var &lt;#myvar1#&gt;
-    var &lt;#myvar2#&gt;
+    var autoEncodings: NSArray = ["&lt;#myvar1#&gt;","&lt;#myvar2#&gt;"]
+    var &lt;#myvar1#&gt;: &lt;#T#&gt;!
+    var &lt;#myvar2#&gt;: &lt;#T#&gt;!
+    
+    init(&lt;#myvar1#&gt;: &lt;#T#&gt;,&lt;#myvar2#&gt;: &lt;#T#&gt;) {
+        self.&lt;#myvar1#&gt; = &lt;#myvar1#&gt;
+        self.&lt;#myvar2#&gt; = &lt;#myvar2#&gt;
+        super.init()
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C9BF586F-7D6D-4687-A10C-0C78A867B795</string>
@@ -48,6 +62,6 @@ class &lt;#ClassName#&gt;: AutoCoded {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
